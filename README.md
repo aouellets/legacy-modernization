@@ -1,8 +1,8 @@
 # Legacy Modernization & Migration
 
-**Move old code to modern stacks without a risky big-bang rewrite.** — built in-house by [Skill&nbsp;Me](https://skillme.dev).
+**For engineers in legacy code: modernize incrementally, no big-bang rewrite.** — built in-house by [Skill&nbsp;Me](https://skillme.dev).
 
-Brownfield work, encoded. Plan strangler-fig migrations, drive major framework and language-version upgrades, extract the business rules buried in tangled code, pin behavior with characterization tests, eliminate dead code with evidence, and decompose a monolith along real bounded-context seams.
+Reach for this when you inherit a business-critical codebase that has to keep running while you drag it onto a modern stack. Plan a strangler-fig migration that runs old and new side by side, carve one safe bounded-context seam out of a monolith, drive major framework and language-version upgrades as small reversible CI-gated PRs, recover the business rules buried in tangled code, pin current behavior with characterization tests before you touch it, audit dependency risk as you upgrade, and delete dead code with evidence — so nothing breaks while everything moves.
 
 ⭐ **If this is useful, star the repo** — it's how we gauge what to build next.
 
@@ -14,13 +14,13 @@ Brownfield work, encoded. Plan strangler-fig migrations, drive major framework a
 
 ## Skills in this pack
 
-- **[Strangler Fig Planner](skills/strangler-fig-planner/SKILL.md)** — Produces an incremental migration plan that runs the legacy and new systems side by side behind a routing layer, slicing and sequencing work to avoid a big-bang rewrite.
-- **[Framework Upgrader](skills/framework-upgrader/SKILL.md)** — Drives a major-version framework upgrade using codemods, changelog diffing, and incremental PRs while keeping the app green throughout.
-- **[Language Version Migrator](skills/language-version-migrator/SKILL.md)** — Ports a codebase across breaking language or runtime versions using shims, automated transforms, and layered verification.
-- **[Business Rule Extractor](skills/business-rule-extractor/SKILL.md)** — Reads tangled legacy logic and documents the implicit business rules and edge cases it encodes before a rewrite, so behavior is preserved.
-- **[Characterization Test Writer](skills/characterization-test-writer/SKILL.md)** — Writes pinning and characterization tests around untested legacy code to lock in current behavior before refactoring.
-- **[Dead Code Eliminator](skills/dead-code-eliminator/SKILL.md)** — Finds unreachable, unused, and orphaned code with hard evidence and removes it safely without breaking dynamic callers.
-- **[Monolith Decomposer](skills/monolith-decomposer/SKILL.md)** — Identifies bounded-context seams for extracting a service from a monolith, analyzing dependencies, data ownership, and anti-corruption layers, then sequences the extraction.
+- **[Strangler Fig Planner](skills/strangler-fig-planner/SKILL.md)** — Produces an incremental migration plan that runs a legacy and a new system side by side behind a routing seam, slicing and sequencing whole capabilities so the old system stays live until its last route is cut.
+- **[Framework Upgrader](skills/framework-upgrader/SKILL.md)** — Drives a major-version framework bump as a sequence of small, reversible, CI-gated PRs using official codemods and changelog diffing while keeping the app green.
+- **[Language Version Migrator](skills/language-version-migrator/SKILL.md)** — Ports a codebase across a breaking language or runtime version using compatibility shims, automated transforms, and old-vs-new verification.
+- **[Business Rule Extractor](skills/business-rule-extractor/SKILL.md)** — Produces a documented inventory of the implicit business rules, edge cases, and bug-as-feature behaviors that tangled code encodes, with real input-to-output examples, so a rewrite preserves behavior.
+- **[Characterization Test Writer](skills/characterization-test-writer/SKILL.md)** — Writes pinning and characterization tests that lock in the current behavior of untested legacy code before a refactor, so any later behavior change trips an alarm.
+- **[Dead Code Eliminator](skills/dead-code-eliminator/SKILL.md)** — Proves code is unreachable with converging evidence, then removes it and its tests, fixtures, and flags in reversible slices without breaking dynamic callers.
+- **[Monolith Decomposer](skills/monolith-decomposer/SKILL.md)** — Finds and sequences one bounded-context seam to extract from a monolith, gated on dependency, data-ownership, and transaction-boundary evidence, and produces an incremental strangler extraction plan.
 - **[Dependency Risk Audit](skills/dependency-risk-audit/SKILL.md)** — Assesses third-party dependency risk across CVEs, maintenance health, license exposure, and supply-chain hygiene.
 - **[TDD Expert](skills/tdd-expert/SKILL.md)** — Enforces Red-Green-Refactor discipline: write the failing test first, then the minimum code to pass it.
 
